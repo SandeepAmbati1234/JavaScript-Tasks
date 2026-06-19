@@ -1,0 +1,216 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+  }
+
+  h1 {
+      text-align: center;
+      padding: 28px;
+      color: white;
+      background: linear-gradient(90deg, #4f46e5, #7c3aed);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      font-size: 26px;
+      letter-spacing: 0.5px;
+  }
+
+  .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+  }
+
+  .controls {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+  }
+
+  input,
+  select {
+      padding: 10px 14px;
+      width: 240px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+      font-size: 15px;
+      transition: 0.3s;
+      background: #f9fafb;
+  }
+
+  input:focus,
+  select:focus {
+      border-color: #4f46e5;
+      background: white;
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  }
+
+  h3 {
+      color: #333;
+      font-size: 16px;
+      white-space: nowrap;
+  }
+
+  #cartCount {
+      background: #4f46e5;
+      color: white;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 15px;
+  }
+
+  #stats {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 20px 24px;
+  }
+
+  #stats .stat-box {
+      flex: 1;
+      min-width: 140px;
+      background: white;
+      border-radius: 12px;
+      padding: 16px 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+      font-size: 13px;
+      color: #666;
+      border-left: 4px solid #4f46e5;
+  }
+
+  #stats .stat-box strong {
+      display: block;
+      font-size: 22px;
+      color: #111;
+      margin-top: 4px;
+  }
+
+  #loading {
+      text-align: center;
+      font-size: 18px;
+      color: #888;
+      padding: 40px;
+  }
+
+  #products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 0 24px 30px;
+  }
+
+  .card {
+      background: white;
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+      transition: 0.25s ease;
+      border: 1px solid #f0f0f0;
+  }
+
+  .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.13);
+  }
+
+  .card img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      margin-bottom: 14px;
+  }
+
+  .card h4 {
+      font-size: 14px;
+      min-height: 42px;
+      color: #222;
+      margin-bottom: 6px;
+      line-height: 1.4;
+  }
+
+  .card .category {
+      display: inline-block;
+      font-size: 11px;
+      background: #eef2ff;
+      color: #4f46e5;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+  }
+
+  .card .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #111;
+      margin: 8px 0;
+  }
+
+  .card .rating {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 4px;
+  }
+
+  button {
+      margin-top: 12px;
+      padding: 10px 20px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #4f46e5, #7c3aed);
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.2s;
+  }
+
+  button:hover {
+      opacity: 0.88;
+      transform: translateY(-1px);
+  }
+
+  @media (max-width: 1024px) {
+      #products {
+          grid-template-columns: repeat(2, 1fr);
+      }
+  }
+
+  @media (max-width: 768px) {
+      .top-bar {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+      }
+
+      .controls {
+          flex-direction: column;
+          width: 100%;
+      }
+
+      input,
+      select {
+          width: 100%;
+      }
+
+      #products {
+          grid-template-columns: 1fr;
+          padding: 0 16px 24px;
+      }
+
+      #stats {
+          margin: 16px;
+      }
+  }
